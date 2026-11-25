@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'screens/about_screen.dart';
 import 'screens/disclaimer_screen.dart';

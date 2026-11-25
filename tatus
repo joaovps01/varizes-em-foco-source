@@ -1,0 +1,309 @@
+[1mdiff --git a/analysis_options.yaml b/analysis_options.yaml[m
+[1mindex 0d29021..5405f7b 100644[m
+[1m--- a/analysis_options.yaml[m
+[1m+++ b/analysis_options.yaml[m
+[36m@@ -7,6 +7,11 @@[m
+ [m
+ # The following line activates a set of recommended lints for Flutter apps,[m
+ # packages, and plugins designed to encourage good coding practices.[m
+[32m+[m[32manalyzer:[m
+[32m+[m[32m  exclude:[m
+[32m+[m[32m    - build/**[m
+[32m+[m[32m    - android/**[m
+[32m+[m[32m    - web/**[m
+ include: package:flutter_lints/flutter.yaml[m
+ [m
+ linter:[m
+[1mdiff --git a/lib/app.dart b/lib/app.dart[m
+[1mindex 75bf8b5..2d18ea3 100644[m
+[1m--- a/lib/app.dart[m
+[1m+++ b/lib/app.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import 'screens/about_screen.dart';[m
+ import 'screens/disclaimer_screen.dart';[m
+[1mdiff --git a/lib/main.dart b/lib/main.dart[m
+[1mindex 697909f..95a8795 100644[m
+[1m--- a/lib/main.dart[m
+[1m+++ b/lib/main.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import 'app.dart';[m
+ [m
+[1mdiff --git a/lib/screens/about_screen.dart b/lib/screens/about_screen.dart[m
+[1mindex 07496f4..16fab5e 100644[m
+[1m--- a/lib/screens/about_screen.dart[m
+[1m+++ b/lib/screens/about_screen.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../theme/brand_theme.dart';[m
+ import '../widgets/theme_toggle_button.dart';[m
+[1mdiff --git a/lib/screens/disclaimer_screen.dart b/lib/screens/disclaimer_screen.dart[m
+[1mindex b0b7323..9764f5e 100644[m
+[1m--- a/lib/screens/disclaimer_screen.dart[m
+[1m+++ b/lib/screens/disclaimer_screen.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../theme/brand_theme.dart';[m
+ import '../widgets/primary_button.dart';[m
+[1mdiff --git a/lib/screens/home_screen.dart b/lib/screens/home_screen.dart[m
+[1mindex 1b72c80..be5687f 100644[m
+[1m--- a/lib/screens/home_screen.dart[m
+[1m+++ b/lib/screens/home_screen.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../theme/brand_theme.dart';[m
+ import '../widgets/primary_button.dart';[m
+[1mdiff --git a/lib/screens/questionnaire_screen.dart b/lib/screens/questionnaire_screen.dart[m
+[1mindex 46522a3..d8f8849 100644[m
+[1m--- a/lib/screens/questionnaire_screen.dart[m
+[1m+++ b/lib/screens/questionnaire_screen.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../data/questions_data.dart';[m
+ import '../models/answer_model.dart';[m
+[1mdiff --git a/lib/screens/result_screen.dart b/lib/screens/result_screen.dart[m
+[1mindex fca7bcc..b80fed0 100644[m
+[1m--- a/lib/screens/result_screen.dart[m
+[1m+++ b/lib/screens/result_screen.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../models/result_model.dart';[m
+ import '../theme/brand_theme.dart';[m
+[1mdiff --git a/lib/theme/brand_theme.dart b/lib/theme/brand_theme.dart[m
+[1mindex 95c53ed..07620dc 100644[m
+[1m--- a/lib/theme/brand_theme.dart[m
+[1m+++ b/lib/theme/brand_theme.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ class BrandColors {[m
+   const BrandColors._();[m
+[1mdiff --git a/lib/widgets/primary_button.dart b/lib/widgets/primary_button.dart[m
+[1mindex 0dd6f96..806ae37 100644[m
+[1m--- a/lib/widgets/primary_button.dart[m
+[1m+++ b/lib/widgets/primary_button.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ class PrimaryButton extends StatelessWidget {[m
+   const PrimaryButton({[m
+[1mdiff --git a/lib/widgets/progress_indicator_widget.dart b/lib/widgets/progress_indicator_widget.dart[m
+[1mindex d381e8d..dea5d42 100644[m
+[1m--- a/lib/widgets/progress_indicator_widget.dart[m
+[1m+++ b/lib/widgets/progress_indicator_widget.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../theme/brand_theme.dart';[m
+ [m
+[1mdiff --git a/lib/widgets/question_card.dart b/lib/widgets/question_card.dart[m
+[1mindex 237a52a..e7dc148 100644[m
+[1m--- a/lib/widgets/question_card.dart[m
+[1m+++ b/lib/widgets/question_card.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../models/answer_model.dart';[m
+ import '../models/question_model.dart';[m
+[1mdiff --git a/lib/widgets/result_card.dart b/lib/widgets/result_card.dart[m
+[1mindex 157bd6f..547ad5d 100644[m
+[1m--- a/lib/widgets/result_card.dart[m
+[1m+++ b/lib/widgets/result_card.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../theme/brand_theme.dart';[m
+ [m
+[1mdiff --git a/lib/widgets/theme_toggle_button.dart b/lib/widgets/theme_toggle_button.dart[m
+[1mindex 94b7054..e5ada0b 100644[m
+[1m--- a/lib/widgets/theme_toggle_button.dart[m
+[1m+++ b/lib/widgets/theme_toggle_button.dart[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import 'package:flutter/material.dart';[m
+[32m+[m[32mimport 'package:material_ui/material_ui.dart';[m
+ [m
+ import '../app.dart';[m
+ [m
+[1mdiff --git a/pubspec.lock b/pubspec.lock[m
+[1mindex 033acff..8d58e48 100644[m
+[1m--- a/pubspec.lock[m
+[1m+++ b/pubspec.lock[m
+[36m@@ -29,10 +29,10 @@[m [mpackages:[m
+     dependency: transitive[m
+     description:[m
+       name: clock[m
+[31m-      sha256: fddb70d9b5277016c77a80201021d40a2247104d9f4aa7bab7157b7e3f05b84b[m
+[32m+[m[32m      sha256: e51d50bca3217c9a9fa2b41a30e4a38971133f5f9ec7a3d57bae095007f1d28e[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.1.2"[m
+[32m+[m[32m    version: "1.1.3"[m
+   collection:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -49,6 +49,14 @@[m [mpackages:[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+     version: "1.0.9"[m
+[32m+[m[32m  cupertino_ui:[m
+[32m+[m[32m    dependency: transitive[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      name: cupertino_ui[m
+[32m+[m[32m      sha256: c3eaf7f5bdfee36deb0b14a4cbf7602f1b6b8d8b8576b81f38fc08c25881c94c[m
+[32m+[m[32m      url: "https://pub.dev"[m
+[32m+[m[32m    source: hosted[m
+[32m+[m[32m    version: "1.1.7"[m
+   fake_async:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -70,11 +78,24 @@[m [mpackages:[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+     version: "6.0.0"[m
+[32m+[m[32m  flutter_localizations:[m
+[32m+[m[32m    dependency: transitive[m
+[32m+[m[32m    description: flutter[m
+[32m+[m[32m    source: sdk[m
+[32m+[m[32m    version: "0.0.0"[m
+   flutter_test:[m
+     dependency: "direct dev"[m
+     description: flutter[m
+     source: sdk[m
+     version: "0.0.0"[m
+[32m+[m[32m  intl:[m
+[32m+[m[32m    dependency: transitive[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      name: intl[m
+[32m+[m[32m      sha256: "1ca20c894b1717686a2319b8548763d812bc0aabdac580420a44c5178c57a867"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+[32m+[m[32m    source: hosted[m
+[32m+[m[32m    version: "0.20.3"[m
+   leak_tracker:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -107,14 +128,22 @@[m [mpackages:[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+     version: "6.1.0"[m
+[32m+[m[32m  listen:[m
+[32m+[m[32m    dependency: transitive[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      name: listen[m
+[32m+[m[32m      sha256: "47501a08016a43fcad79252439d723f50f14f88fa7bfd8a177e0a417e5c9e1f2"[m
+[32m+[m[32m      url: "https://pub.dev"[m
+[32m+[m[32m    source: hosted[m
+[32m+[m[32m    version: "1.0.1"[m
+   matcher:[m
+     dependency: transitive[m
+     description:[m
+       name: matcher[m
+[31m-      sha256: dc0b7dc7651697ea4ff3e69ef44b0407ea32c487a39fff6a4004fa585e901861[m
+[32m+[m[32m      sha256: "31bd099b47c10cd1aeb55146a2d46ce0277630ecef3f7dae54ad7873f36696cd"[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "0.12.19"[m
+[32m+[m[32m    version: "0.12.20"[m
+   material_color_utilities:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -123,14 +152,22 @@[m [mpackages:[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+     version: "0.13.0"[m
+[32m+[m[32m  material_ui:[m
+[32m+[m[32m    dependency: "direct main"[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      name: material_ui[m
+[32m+[m[32m      sha256: a6b19012df437a356cbc01f8ea22a105e07194c47c9a6009da0032a0ce35c4ab[m
+[32m+[m[32m      url: "https://pub.dev"[m
+[32m+[m[32m    source: hosted[m
+[32m+[m[32m    version: "1.11.1"[m
+   meta:[m
+     dependency: transitive[m
+     description:[m
+       name: meta[m
+[31m-      sha256: "23f08335362185a5ea2ad3a4e597f1375e78bce8a040df5c600c8d3552ef2394"[m
+[32m+[m[32m      sha256: "307249ce4ff29d58a18e97f6345f539382eb9c9c29ecda628900f31de0443dd9"[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.17.0"[m
+[32m+[m[32m    version: "1.19.0"[m
+   path:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -156,10 +193,10 @@[m [mpackages:[m
+     dependency: transitive[m
+     description:[m
+       name: stack_trace[m
+[31m-      sha256: "8b27215b45d22309b5cddda1aa2b19bdfec9df0e765f2de506401c071d38d1b1"[m
+[32m+[m[32m      sha256: "277654b3034d17ac6f9f1cb5595db011b1d5d41e8806866db28e0abaa101c490"[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "1.12.1"[m
+[32m+[m[32m    version: "1.12.2"[m
+   stream_channel:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -188,18 +225,18 @@[m [mpackages:[m
+     dependency: transitive[m
+     description:[m
+       name: test_api[m
+[31m-      sha256: "8161c84903fd860b26bfdefb7963b3f0b68fee7adea0f59ef805ecca346f0c7a"[m
+[32m+[m[32m      sha256: "0a10344e901e5b2e63819567951cb6a06673ed6b84f40462188ff5a0c41f371f"[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "0.7.10"[m
+[32m+[m[32m    version: "0.7.14"[m
+   vector_math:[m
+     dependency: transitive[m
+     description:[m
+       name: vector_math[m
+[31m-      sha256: d530bd74fea330e6e364cda7a85019c434070188383e1cd8d9777ee586914c5b[m
+[32m+[m[32m      sha256: fa49e1674cb84acb900141714e6c6e1f9ae099827c24d141430ff6819db4e1bc[m
+       url: "https://pub.dev"[m
+     source: hosted[m
+[31m-    version: "2.2.0"[m
+[32m+[m[32m    version: "2.4.4"[m
+   vm_service:[m
+     dependency: transitive[m
+     description:[m
+[36m@@ -209,5 +246,5 @@[m [mpackages:[m
+     source: hosted[m
+     version: "15.2.0"[m
+ sdks:[m
+[31m-  dart: ">=3.11.3 <4.0.0"[m
+[31m-  flutter: ">=3.18.0-18.0.pre.54"[m
+[32m+[m[32m  dart: ">=3.13.0 <4.0.0"[m
+[32m+[m[32m  flutter: ">=3.47.0"[m
+[1mdiff --git a/pubspec.yaml b/pubspec.yaml[m
+[1mindex 771d036..def61e8 100644[m
+[1m--- a/pubspec.yaml[m
+[1m+++ b/pubspec.yaml[m
+[36m@@ -35,6 +35,7 @@[m [mdependencies:[m
+   # Use with the CupertinoIcons class for iOS style icons.[m
+   cupertino_icons: ^1.0.8[m
+ [m
+[32m+[m[32m  material_ui: any[m
+ dev_dependencies:[m
+   flutter_test:[m
+     sdk: flutter[m
